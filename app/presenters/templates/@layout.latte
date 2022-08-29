@@ -1,0 +1,56 @@
+{import './Components/sidebar.latte'}
+{import './Components/navbar.latte'}
+{import './Components/confirmModal.latte'}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+
+	<title>{ifset title}{include title|stripHtml} | {/ifset}Sportisimo Demo</title>
+	{block style}
+		<link rel="stylesheet" href="{$basePath}/dist/front.bundle.css">
+	{/block}
+</head>
+
+<body class="grey lighten-2">
+	<div n:if="$sidebar">
+		{include sidebar}
+	</div>
+
+	<div id="ajax-loader" class="ajax-loader">
+		<div class="ajax-loader__wheel"></div>
+	</div>
+
+	<div>
+		{var $pageName = ''}
+			{include navbar}
+				<div class="navbar-fixed">	
+			{block subnavbar}
+		{/block}
+		</div>
+	</div>
+
+	<section class="flashes" n:snippet="flashes">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					{foreach $flashes as $flash}
+						<input type="hidden" class="flashMessage" value="{$flash->message}" />
+					{/foreach}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{include content}
+
+	<div n:snippet="modalWindow">{block modalWindow}{/block}</div>
+	{include confirmModal}
+
+	{block scripts}
+		<script src="{$basePath}/dist/front.bundle.js"></script>
+	{/block}
+</body>
+</html>

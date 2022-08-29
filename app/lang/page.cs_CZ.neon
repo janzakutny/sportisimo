@@ -1,0 +1,27 @@
+navigation:
+    dashboard: "Nástěnka"
+    users: "Uživatele"
+    brands: "Značky"
+    products: "Produkty"
+    ourProducts: "Naše produkty"
+
+brand: 
+    notFound: "Značka nebyla nalezená"
+    beenSaved: "Značka byla uložená"
+    beenDeleted: "Značka byla smazaná"
+    addBrand: "Přidat značku"
+    name: "Název"
+    description: "Popis"
+    newBrand: "Nová značka"
+    editBrand: "Úprava značky"
+
+product: 
+    notFound: "Produkt nebyl nalezen"
+    beenSaved: "Produkt byl uložen"
+    beenDeleted: "Produkt byl smazan"
+    addProduct: "Přidat produkt"
+    name: "Název"
+    description: "Popis"
+    newProduct: "Nový produkt"
+    editProduct: "Úprava produktu"
+    selectBrand: "Vyberte si značku"

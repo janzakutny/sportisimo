@@ -1,0 +1,5 @@
+/vendor/*
+/log/*
+/logs/*
+/node_modules/*
+/temp/*

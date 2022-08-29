@@ -1,0 +1,55 @@
+{block subnavbar}
+<nav>
+    <div class="nav-wrapper blue">
+        <div class="brand-logo page-name"><i class="material-icons">arrow_back</i> {_page.navigation.users}</div>
+    </div>
+</nav>
+{/block}
+
+{block title}
+    {_page.navigation.users}
+{/block}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col s12 white">
+            <div class="section">
+                <table class="centered userTable" n:snippet="userTable">
+                    <thead>
+                        <tr>
+                            <td colspan="6">
+                                <a n:href="add" class="waves-effect waves-light blue btn add-button ajax"><i class="material-icons left">add</i> {_user.add}</a>
+                            </td>
+                        </tr>
+                        <tr class="grey lighten-3 grey-text">
+                            <th>{_user.name}</th>
+                            <th>{_user.surname}</th>
+                            <th>{_forms.email.name}</th>
+                            <th>{_user.roles}</th>
+                            <th>{_user.registered}</th>
+                            <th>{_forms.button.action}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr n:foreach="$users as $userEntity">
+                            <td>{$userEntity->name}</td>
+                            <td>{$userEntity->surname}</td>
+                            <td>{$userEntity->email}</td>
+                            <td>    
+                                {foreach $userEntity->userRoles as $role}
+                                    {var $roleName = 'user.role.' . $role}
+                                    {$roleName|translate}{sep}, {/sep}
+                                {/foreach}
+                            </td>
+                            <td>{$userEntity->registerDate|date:'j. n. Y H:i'}</td>
+                            <td><a n:href="edit id => $userEntity->id" class="grey-text ajax action">{_forms.button.edit}</a> 
+                                <a n:href="deleteUser! userId => $userEntity->id" class="grey-text ajax action" data-naja-history="off" data-confirm="{_forms.button.sure}">{_forms.button.delete}</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+parameters:
+	tracyEmail: "issues@issues.cz"
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Module\Presenters\*Presenter
+
+
+session:
+	expiration: 14 days
+	autoStart: true
+
+forms:
+	messages:
+		EQUAL: 'forms.text.equal'
+		NOT_EQUAL: 'forms.text.notEqual'
+		FILLED: 'forms.text.filled'
+		BLANK: 'forms.text.blank'
+		MIN: 'forms.text.min'
+		MAX: 'forms.text.max'
+		MIN_LENGTH: 'forms.text.minLength'
+		MAX_LENGTH: 'forms.text.maxLength'
+		EMAIL: 'forms.email.format'
+		URL: 'forms.text.url'
+		INTEGER: 'forms.text.integer'
+		FLOAT: 'forms.text.float'
+		MAX_FILE_SIZE: 'forms.upload.maxFileSize'
+		IMAGE: 'forms.upload.validImage'

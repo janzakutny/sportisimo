@@ -1,0 +1,95 @@
+#toast-container {
+    max-width: 100% !important;
+    top: 100px !important;
+    right: 0 !important;
+    left: 0 !important;
+    z-index: 1000 !important;
+
+    .toast {
+        margin: 0 auto 5px;
+        width: 1000px !important;
+    }
+}
+
+#slide-out {
+    width: 80px;
+    i {
+        color: #fff;
+    }
+}
+
+nav {
+    .brand-logo {
+        margin-left: 100px;
+    }
+
+    .page-name {
+        font-size: 20px;
+    }
+}
+
+.invalid-feedback {
+    color: #ff0000;
+}
+
+.brandTable, .productTable, .userTable {
+    .action {
+        margin-left: 5px;
+    }
+
+    .add-button {
+        margin-left: 15px;
+    }
+}
+
+.pages {
+    text-align: right;
+    li {
+        a {
+            color: #808080;
+        }
+    }
+    li.active {
+        background-color: transparent;
+        border-bottom: 3px solid #2196F3;
+        a {
+            color: #000;
+        }
+    }
+}
+
+.per-page {
+    text-align: right;
+    li {
+        a {
+            color: #000 !important;
+        }
+    }
+
+    li.active {
+        background-color: transparent;
+        a {
+            color: #808080 !important;
+        }
+    }
+}
+
+#confirmModal {
+    width: 500px;
+}
+
+.modal {
+    min-height: 800px;
+}
+
+form {
+    .error {
+        color: #ff0000;
+    }
+}
+
+.label {
+    background-color: #b92525;
+    padding: 3px;
+    border-radius: 4px;
+}

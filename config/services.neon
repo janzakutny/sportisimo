@@ -1,0 +1,60 @@
+services:
+	- App\Router\RouterFactory::createRouter
+	- App\Misc\ContextParametersFactory
+	- AlesWita\VisualPaginator\VisualPaginatorFactory
+
+	tracy.logger:
+		factory: App\Logger(%appDir%/../logs, %tracyEmail%)
+		setup:
+			- enableStdout()
+
+	# auth
+	- App\Model\Authenticator(..., ..., %tempDir%)
+	- App\Model\Authorizator
+
+	# validators
+	- App\Model\Utils\Validators
+	- App\Model\Utils\FormValidators
+
+	# forms
+	-
+		factory: App\Forms\SignInForm()
+		implement: App\Forms\ISignInFormFactory
+		inject: true
+
+	-
+		factory: App\Forms\BrandForm(%eshop%, %brand%)
+		implement: App\Forms\IBrandFormFactory
+		parameters: [eshop, brand = null]
+		inject: true
+
+	-
+		factory: App\Forms\ProductForm(%eshop%, %product%)
+		implement: App\Forms\IProductFormFactory
+		parameters: [eshop, product = null]
+		inject: true
+
+	-
+		factory: App\Forms\UserForm(%eshop%, %userEntity%)
+		implement: App\Forms\IUserFormFactory
+		parameters: [eshop, userEntity = null]
+		inject: true
+
+
+extensions:
+	dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension
+	nextras.orm: Nextras\Orm\Bridges\NetteDI\OrmExtension
+	translation: Contributte\Translation\DI\TranslationExtension
+	autowired: Kdyby\Autowired\DI\AutowiredExtension
+	authorizator: App\Model\AuthExtension
+
+nextras.orm:
+	model: App\Model\Orm 
+
+translation:
+	locales:
+		default: cs
+		fallback: [cs_CZ, cs]
+
+	dirs:
+		- %appDir%/lang

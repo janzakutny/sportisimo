@@ -1,0 +1,46 @@
+{block subnavbar}
+<nav>
+    <div class="nav-wrapper blue">
+        <div class="brand-logo page-name"><i class="material-icons">arrow_back</i> {_page.navigation.brands}</div>
+    </div>
+</nav>
+{/block}
+
+{block title}
+    {_page.navigation.brands}
+{/block}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col s12 white">
+            <div class="section">
+                <div n:snippet="brandTable" class="brandTable">
+                    <a n:href="addBrand" class="waves-effect waves-light blue btn ajax add-button" data-ajax-history="off"><i class="material-icons left">add</i> {_page.brand.addBrand}</a>
+                    <ul class="collection with-header">
+                        <li class="grey lighten-3 grey-text collection-header">
+                            <span class="title">{_page.brand.name}</span>
+                            <a n:href="Admin:brands order => 1, perPage => $perPage" class="grey-text ajax"><i class="material-icons">arrow_upward</i></a>
+                            <a n:href="Admin:brands order => 0, perPage => $perPage" class="grey-text ajax"><i class="material-icons">arrow_downward</i></a>
+                            <span class="secondary-content grey-text">{_forms.button.action}</span>
+                        </li>
+                        <li n:foreach="$brands as $brand" class="collection-item">
+                            <span class="title">{$brand->name}</span>
+                            <a n:href="editBrand id => $brand->id" class="grey-text secondary-content ajax action" data-ajax-history="off"> {_forms.button.edit} </a> 
+                            <a n:href="deleteBrand! brandId => $brand->id" class="grey-text secondary-content action ajax" data-naja-history="off" data-confirm="{_forms.button.sure}"> {_forms.button.delete} </a> 
+                        </li>
+                    </ul>
+
+                    <div class="align-center">
+                        {control brandsPaginator}
+                        <ul class="pagination per-page">
+                            <li n:class="$perPage == 10 ? 'active disabled'"><a n:href="Admin:brands order => $order, perPage => 10" class="ajax">10</a></li>
+                            <li n:class="$perPage == 20 ? 'active disabled'"><a n:href="Admin:brands order => $order, perPage => 20" class="ajax">20</a></li>
+                            <li n:class="$perPage == 30 ? 'active disabled'"><a n:href="Admin:brands order => $order, perPage => 30" class="ajax">30</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

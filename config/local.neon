@@ -1,0 +1,9 @@
+parameters:
+	url: 'sportisimo.l'
+
+dbal:
+	driver: mysqli
+	host: 127.0.0.1
+	database: sportisimo
+	username: root
+	password: root

@@ -1,0 +1,19 @@
+{block sidebar}
+    <ul id="slide-out" class="sidenav sidenav-fixed blue darken-2">
+        <li>
+            <a href="#"><i class="material-icons">menu</i></a>
+        </li>
+        <li>
+            <a n:href="Default:default" class="waves-effects" title="{_page.navigation.dashboard}"><i class="material-icons">dashboard</i></a>
+        </li>
+        <li>
+            <a n:href="User:users" class="waves-effects" title="{_page.navigation.users}"><i class="material-icons">people</i></a>
+        </li>
+        <li>
+            <a n:href="Admin:products"><i class="material-icons" title="{_page.navigation.products}">new_releases</i></a>
+        </li>
+        <li>
+            <a n:href="Admin:brands" class="waves-effects" title="{_page.navigation.brands}"><i class="material-icons">local_offer</i></a>
+        </li>
+    </ul>
+{/block}

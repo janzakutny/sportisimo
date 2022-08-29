@@ -1,0 +1,37 @@
+fullName: "Jméno a příjmeni"
+name: "Jméno"
+nameRequired: "Vyplňte prosím jméno"
+surname: "Příjmení"
+surnameRequired: "Vyplňte prosím příjmení"
+roles: "Role"
+email: "E-mail"
+emailRequired: "Vyplňte prosím email"
+notFound: "Uživatel nebyl nalezen"
+beenSaved: "Uživatel byl uložen"
+beenDeleted: "Uživatel byl smazaný"
+add: "Přidat uživatele"
+myProfile: "Můj profil"
+registered: "Registrovaný"
+password: "Heslo"
+users: "Uživatelé"
+addUser: "Přidání uživatele"
+editUser: "Úprava uživatele"
+
+sign:
+	in: "Přihlásit se"
+	up: "Registrovat se"
+	out: "Odhlásit"
+	remember: "Pamatovat si mě na tomto počitači"
+	signedOut: "Byl(a) jste ohlášen(a)."
+	signedOutDueInactivity: "Byl(a) jste ohlášen(a) z důvodu neaktivity. Prosím přihlaste se znovu."
+	invalidCredentials: "Zadal(a) jste neplatné uživatelské jméno nebo heslo."
+
+role:
+	guest: "Host"
+	authenticated: "Přihlášený"
+	admin: "Administrátor"
+
+state:
+	name: "Stav"
+	actived: "Aktivní"
+	inactived: "Neaktivní"

@@ -1,0 +1,24 @@
+parameters:
+
+application:
+	errorPresenter: Error
+	mapping:
+		*: App\*Presenter
+
+session:
+	expiration: 14 days
+	autoStart: true
+	debugger: true
+	cookie_domain: ''
+
+di:
+	debugger: true
+
+tracy:
+	email: "issues@issues.cz"
+	strictMode: true
+
+services:
+
+extensions:
+	dbal: Nextras\Dbal\Bridges\NetteDI\DbalExtension

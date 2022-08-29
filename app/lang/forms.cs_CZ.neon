@@ -1,0 +1,65 @@
+protection:
+	csrf: "Prosím odešlete formulář znovu (vypršela platnost bezpečnostního tokenu)."
+
+sign:
+	login: "Přihlásit se"
+	out: "Odhlásit"
+	remember: "Zůstat přihlášen na tomto počitači"
+	invalidCredentials: "Zadal(a) jste nesprávný e-mail nebo heslo."
+	signedOut: "Odhlášení proběhlo úspěšně."
+	signedOutDueInactivity: "Byl(a) jste odhlášen(a) zdůvodu neaktivty. Prosím přihlaste se znovu."
+	title: "Pro přihlášení zadejte email a heslo"
+
+email:
+	name: "E-mail"
+	placeholder: "E-mail"
+	required: "Prosím zadejte e-mail"
+	alreadyExists: "Uživatel s tímto e-mailem již existuje."
+	format: "Prosím zkontrolujte překlepy v e-mailové adrese, e-mail nemá správný formát"
+
+password:
+	name: "Heslo"
+	placeholder: "Heslo"
+	required: "Prosím zadejte heslo"
+	confirm: "Potvrzení hesla"
+	confirmRequired: "Prosím zadejte heslo znovu. Jedná se o ochranu před překlepy"
+	confirmPlaceholder: "Potvrzení hesla"
+	confirmEqual: "Prosím zadejte stejné heslo. Jedná se o ochranu před překlepy"
+
+button:
+	delete: "Smazat"
+	edit: "Editovat"
+	action: "Akce"
+	name: "Název"
+	sure: "Jste si jistý?"
+	save: "Uložit"
+	next: "Další"
+	last: "Poslední"
+	first: "Na začátek"
+	previous: "Předchozí"
+	confirm: "Potvrdit"
+	close: "Zavřít"
+
+text:
+	filled: "Prosím vyplňte toto pole"
+	blank: "Prosím nevyplňujte toto pole"
+	equal: "Prosím zadejte slovo %s"
+	notEqual: "Prosím zadejte jiné slovo než %s"
+	float: "Prosím zadejte číselnou hodnotu"
+	integer: "Prosím zadejte celočíselnou hodnotu"
+	min: "Prosím zadejte minimálně %count%"
+	max: "Prosím zadejte maximálně %count%"
+	url: "Prosím zadejte platnou url adresu"
+	range: "Prosím zadejte hodnotu mezi %d a %d"
+	length: "Prosím zadejte hodnotu mezi %d a %d znaky"
+	minLength: "Prosím zadejte minálně %count% znak|Prosím zadejte minálně %count% znaky|Prosím zadejte minálně %count% znaků"
+	maxLength: "Prosím zadejte maximálně %count% znak|Prosím zadejte maximálně %count% znaky|Prosím zadejte maximálně %count% znaků"
+	required: "* Povinný údaj"
+
+paginator:
+	itemsPerPage: "Počet položek na stránku"
+	name: "Zobrazit stránkování"
+	none: "Nezobrazovat"
+	up: "Nahoře"
+	down: "Dole"
+	both: "Nahoře i dole"

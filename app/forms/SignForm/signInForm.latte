@@ -1,0 +1,17 @@
+<form n:name="form" class="user">
+    {$form->getRenderer()->render($form, 'ownerrors')|noescape}
+
+    <div>
+        <input n:name="em" autofocus />
+    </div>
+    <div>
+        <input n:name="password"/>
+    </div>
+    <div class="switch">
+        <label n:name="remember" class="custom-control-label">
+            <input n:name="remember"> <span class="clever">{_forms.sign.remember}</span>
+        </label>
+    </div>
+
+    <button n:name="sign" class="btn ">{_forms.sign.login}</button>
+</form>

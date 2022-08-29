@@ -1,0 +1,8 @@
+<div n:foreach="$flashes as $flash" class="card-panel teal alert-{$flash->type}">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	{if strpos($flash->type, 'alert-lg') !== false}
+	{$flash->message|noescape}
+	{else}
+	{$flash->message}
+	{/if}
+</div>

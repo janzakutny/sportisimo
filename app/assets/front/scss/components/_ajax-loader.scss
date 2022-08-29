@@ -1,0 +1,37 @@
+.ajax-loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 1090;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s opacity 0s linear;
+  
+    &__wheel {
+      width: 40px;
+      height: 40px;
+      border: 5px solid #f8f9fa ;
+      border-top-color: #6c757d;
+      border-radius: 100%;
+      animation: rotate 1s linear infinite;
+    }
+  
+    &--active {
+      visibility: visible;
+      opacity: 1;
+    }
+  
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  

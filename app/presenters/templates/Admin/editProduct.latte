@@ -1,0 +1,41 @@
+{block subnavbar}
+<nav>
+    <div class="nav-wrapper blue">
+        <div class="brand-logo page-name"><i class="material-icons">arrow_back</i> {_page.product.editProduct}</div>
+    </div>
+</nav>
+{/block}
+
+{block title}
+    {_page.product.editProduct}
+{/block}
+
+{define modalWindow}
+    {include #parent}
+    {if $showModal}
+        <div class="container">
+            <div class="modal">
+                <div class="modal-content">
+                    <div class="container">
+                    <div class="row">
+                        <div class="col s12 card white">
+                            <h5>{_page.product.editProduct}</h5>
+                            {control productForm}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {/if}
+{/define}
+
+{block content}
+<div class="container">
+    <div class="row">
+        <div class="col s12 white">
+            <div class="section">
+                {control productForm}
+            </div>
+        </div>
+    </div>
+</div>

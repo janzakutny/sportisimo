@@ -1,0 +1,28 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\Model;
+
+use Nextras\Orm\Mapper\Dbal\Conventions\Conventions;
+use Nextras\Orm\Mapper\Dbal\Conventions\IConventions;
+use Nextras\Orm\Mapper\Dbal\Conventions\Inflector\CamelCaseInflector;
+use Nextras\Orm\Mapper\Dbal\Conventions\Inflector\IInflector;
+
+
+class Mapper extends \Nextras\Orm\Mapper\Mapper
+{
+    protected function createInflector(): IInflector
+    {
+        return new CamelCaseInflector;
+    }
+
+
+    protected function createConventions(): IConventions
+    {
+        $conventions = parent::createConventions();
+        assert($conventions instanceof Conventions); // property is not available on interface
+        $conventions->manyHasManyStorageNamePattern = '%s_%s';
+        return $conventions;
+    }
+}

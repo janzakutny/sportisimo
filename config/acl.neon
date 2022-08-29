@@ -1,0 +1,32 @@
+parameters:
+	acl:
+		roles:
+			guest: []
+			authenticated: [guest]
+			manager: [authenticated]
+			admin: [manager]
+
+		resources:
+			- Error
+			- Error4xx
+			- Sign
+			- Admin
+			- Default
+			- User
+
+		rules:
+			homepageAcl:
+				role: [guest]
+				resource: [Default, Sign, Error, Error4xx]
+				privilege: @Nette\Security\Authorizator::ALL
+
+			userAcl:
+				role: [admin]
+				resource: [User]
+				privilege: @Nette\Security\Authorizator::ALL
+
+			adminAcl:
+				role: [admin]
+				resource: [Admin]
+				privilege: @Nette\Security\Authorizator::ALL
+

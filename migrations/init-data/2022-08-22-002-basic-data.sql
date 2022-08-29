@@ -1,0 +1,2 @@
+INSERT INTO `users` (`name`, `surname`, `email`, `password`, `state`, `roles`, `registerDate`) VALUES
+('Admin',	'Admin',	'admin@admin.cz',	'$2y$10$a0Pd1xSsp/YERyiBcpPTBuRcRALZL.zbbIDu8JLMjZ9N8f1e94Roe',	1,	'authenticated, admin',	'2022-08-22 17:57:33');

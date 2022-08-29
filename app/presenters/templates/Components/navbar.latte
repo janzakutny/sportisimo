@@ -1,0 +1,14 @@
+{block navbar}
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper blue darken-2">
+                <a n:href="Default:default" class="brand-logo">SRP</a>
+
+                <ul id="navbar-items" class="right hide-on-med-and-down">
+                    <li><a n:href="Sign:out" n:if="$user->isLoggedIn()">{_user.sign.out} ({$user->getIdentity()->data['surname']})</a></li>
+                    <li><a n:href="Sign:in" n:if="!$user->isLoggedIn()">{_user.sign.in}</a></li>
+                <ul>
+            </div>
+        </nav>
+    </div>
+{/block}

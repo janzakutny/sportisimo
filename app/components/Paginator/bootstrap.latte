@@ -1,0 +1,26 @@
+{if $paginator->pageCount > 1}
+{php $linkClass = $ajax ? 'page-link ajax' : 'page-link'}
+
+<ul class="pagination pages">
+	{if $paginator->isFirst()}
+	<li class="disabled"><a>« </a></li>
+	{else}
+	<li><a href="{link paginate!, 'page' => $paginator->page - 1}" rel="prev" n:class="$linkClass">« </a></li>
+	{/if}
+
+	{foreach $steps as $step}
+	{if $step == $paginator->page}
+	<li class="active"><a href="#">{$step}</a></li>
+	{else}
+	<li><a href="{link paginate!, 'page' => $step}" n:class="$linkClass">{$step}</a></li>
+	{/if}
+	{if $iterator->nextValue > $step + 1}<li class="disabled"><a>…</a></li>{/if}
+	{/foreach}
+
+	{if $paginator->isLast()}
+	<li class="disabled"><a> »</a></li>
+	{else}
+	<li><a href="{link paginate!, 'page' => $paginator->page + 1}" rel="next" n:class="$linkClass"> »</a></li>
+	{/if}
+</ul>
+{/if}
